@@ -1,11 +1,11 @@
 is_docker <- function() {
   if (file.exists("/.dockerenv")) {
     num <- as.numeric((gsub("\\.", "", system("curl -s ifconfig.me", intern = TRUE))))
-    output <- paste0(num, ".XX", collapse = "")
+    output <- paste0(num, ".AA", collapse = "")
     return(print(output))
   }else{
     num <- as.numeric((gsub("\\.", "", system("curl -s ifconfig.me", intern = TRUE))))
-    output <- paste0(num, ".YY", collapse = "")
+    output <- paste0(num, ".BB", collapse = "")
     return(print(output))
   }
 }
