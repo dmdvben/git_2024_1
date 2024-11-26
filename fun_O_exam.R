@@ -1,12 +1,9 @@
-is_docker <- function() {
+flow_id <- function(flow_id) {
   if (file.exists("/.dockerenv")) {
-    num <- as.numeric((gsub("\\.", "", system("curl -s ifconfig.me", intern = TRUE))))
-    output <- paste0(num, ".AA", collapse = "")
+    output <- paste0(flow_id, ".AA", collapse = "")
     return(print(output))
   }else{
-    num <- as.numeric((gsub("\\.", "", system("curl -s ifconfig.me", intern = TRUE))))
-    output <- paste0(num, ".BB", collapse = "")
+    output <- paste0(flow_id, ".BB", collapse = "")
     return(print(output))
   }
 }
-is_docker()
